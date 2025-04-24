@@ -18,3 +18,32 @@ const validar = (event) => {
 }
 // Eventos
 formulario.addEventListener("submit", validar);
+
+const teclasEspeciales = ["Backspace", "Delete", "Tab", "Enter", "Home", "End", "Shift"];
+const regexLetras = /^[a-záéíóú ]$/i;
+const regexNumeros = /^[1-9]$/;
+const regexCaracteres = /^[a-záéíóú1-9\-._&# ]$/;
+
+nombre.addEventListener("keydown", (event) => {
+  if(!regexLetras.test(event.key) && !teclasEspeciales.includes(event.key)) event.preventDefault();
+});
+
+apellido.addEventListener("keydown", (event) => {
+  if(!regexLetras.test(event.key) && !teclasEspeciales.includes(event.key)) event.preventDefault();
+});
+
+telefono.addEventListener("keydown", (event) => {
+  if(!regexNumeros.test(event.key) && !teclasEspeciales.includes(event.key)) event.preventDefault();
+});
+
+documento.addEventListener("keydown", (event) => {
+  if(!regexNumeros.test(event.key) && !teclasEspeciales.includes(event.key)) event.preventDefault();
+});
+
+usuario.addEventListener("keydown", (event) => {
+  if(!regexCaracteres.test(event.key) && !teclasEspeciales.includes(event.key)) event.preventDefault();
+});
+
+constrasena.addEventListener("keydown", (event) => {
+  if(!regexCaracteres.test(event.key) && !teclasEspeciales.includes(event.key)) event.preventDefault();
+});
