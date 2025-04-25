@@ -119,11 +119,10 @@ form {
   padding: var(--padding);
 }
 
-input {
+input, select {
   display: block;
-  width: 90%;
+  width: 100%;
   padding: calc(var(--padding) + 4px);
-  margin: var(--margin) auto;
   border: solid 1px var(--heavyMetal);
   border-radius: 4px;
   outline: none;
@@ -169,4 +168,31 @@ button:hover {
 .btn:hover {
   background: var(--heavyMetal);
   color: var(--starship);
+}
+
+.form__control{
+  width: 90%;
+  margin: var(--margin) auto;
+}
+
+.form__input{
+  border-color: var(--sycamore);
+  filter: drop-shadow(0px 0px 5px var(--sycamore));
+}
+
+.form__mensaje{
+  display: block;
+  width: 100%;
+  height: min-content;
+  font-size: 0.65rem;
+}
+
+.form__check{
+  display: inline;
+  width: min-content;
+}
+
+.form__terminos{
+  color: white;
+  font-size: 0.8rem;
 }
