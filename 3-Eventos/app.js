@@ -14,7 +14,8 @@ const ciudad = document.querySelector('[name="ciudad"]');
 const documento = document.querySelector('[name="documento"]');
 const usuario = document.querySelector('[name="usuario"]');
 const constrasena = document.querySelector('[name="constrasena"]');
-const politicas = document.querySelector("#politicas")
+const politicas = document.querySelector("#politicas");
+const generos = document.querySelectorAll('[name = "genero"]');
 const btn = document.querySelector("#btn_validar");
 
 
@@ -23,6 +24,14 @@ const btn = document.querySelector("#btn_validar");
 const validarCheck = (event) => {
   if (!politicas.checked) btn.setAttribute("disabled", "");
   else btn.removeAttribute("disabled");
+}
+
+const validarGenero = (event) => { 
+  if (event.target.value) {
+    let contenedor = document.querySelector(".radios");
+    contenedor.classList.remove("form__radios");
+    if (contenedor.nextElementSibling) contenedor.nextElementSibling.remove();
+  }
 }
 
 
@@ -50,4 +59,8 @@ ciudad.addEventListener("blur", outFocus)
 documento.addEventListener("blur", outFocus);
 usuario.addEventListener("blur", outFocus);
 constrasena.addEventListener("blur", outFocus);
+
+generos.forEach(genero => {
+  genero.addEventListener("change", validarGenero);
+})
 

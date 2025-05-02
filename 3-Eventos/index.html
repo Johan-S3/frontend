@@ -48,6 +48,44 @@
               <input type="password" name="constrasena" placeholder="Contraseña" required>
             </div>
             <div class="form__control">
+              <div class="radios">
+                <h4>Genero:</h4>
+                <input class="form__inputs" type="radio" value="1" id="hombre" name="genero" required>
+                <label for="hombre">Hombre</label>
+                <input class="form__inputs" type="radio" value="2" id="mujer" name="genero" required>
+                <label for="mujer">Mujer</label>
+              </div>
+            </div>
+            <div class="form__control">
+              <div class="form__checks">
+                <h4>Habilidades:</h4>
+                <label class="" for="HTML">
+                  <input class="form__inputs" type="checkbox" name="habilidades" id="HTML" value="1" required>
+                  HTML
+                </label>
+                <label for="CSS">
+                  <input class="form__inputs" type="checkbox" name="habilidades" id="CSS" value="2" required>
+                  CSS
+                </label>
+                <label for="javaScript">
+                  <input class="form__inputs" type="checkbox" name="habilidades" id="javaScript" value="3" required>
+                  javaScript
+                </label>
+                <label for="Java">
+                  <input class="form__inputs" type="checkbox" name="habilidades" id="Java" value="4" required>
+                  Java
+                </label>
+                <label for="Php">
+                  <input class="form__inputs" type="checkbox" name="habilidades" id="Php" value="5" required>
+                  Php
+                </label>
+                <label for="C#">
+                  <input class="form__inputs" type="checkbox" name="habilidades" id="C#" value="6" required>
+                  C#
+                </label>
+              </div>
+            </div>
+            <div class="form__control">
               <input class="form__check" type="checkbox" name="politicas" id="politicas">
               <label class="form__terminos" for="politicas">
                 Acepta los
@@ -58,6 +96,18 @@
             <button type="submit" name="" id="btn_validar">Validar</button>
           </form>
         </div>
+
+        <!-- <table class="table">
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Ciudad</th>
+            <th>Documento</th>
+            <th>Usuario</th>
+            <th>constraseña</th>
+          </tr>
+        </table> -->
       </div>
     </section>
   </main>
