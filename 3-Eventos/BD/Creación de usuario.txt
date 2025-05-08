@@ -1,0 +1,5 @@
+create user 'johan31'@'localhost' identified by '2894667';  
+create database usuario; 
+use usuario;  
+grant all privileges on usuario.* to 'johan31'@'localhost'; 
+FLUSH PRIVILEGES;
