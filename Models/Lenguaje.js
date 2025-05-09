@@ -73,8 +73,8 @@ class Lenguaje {
   }
 
   async relacionConUsuarios(lenguajeId){
-    const [usuarios] = await connection.query("SELECT * FROM lenguaje_usuarios WHERE id_lenguaje = ?", [lenguajeId]);
-    return usuarios.length > 0;
+    const [lenguajes_usuarios] = await connection.query("SELECT * FROM lenguaje_usuarios WHERE id_lenguaje = ?", [lenguajeId]);
+    return lenguajes_usuarios.length > 0;
   }
 
   async delete(id){
